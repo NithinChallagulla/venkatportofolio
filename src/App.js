@@ -10,13 +10,14 @@ import droneLogo from './assets/drone.png';
 import javaLogo from './assets/java.png';
 import flaskLogo from './assets/flask.png';
 import canvaLogo from './assets/canva.png';
-import figmaLogo from './assets/figma.png'; 
+import figmaLogo from './assets/figma.png';
 
 import klUniversityImage from './assets/kl.png';
 import sriChaitanyaImage from './assets/sri-chaitanya.jpeg';
 import drGowthamImage from './assets/dr-gowtham.jpg';
 
 import hackathonImage from './assets/hackathon.jpg';
+import ideathonImage from './assets/ideathon.jpg'; // ✅ NEW IMPORT
 
 function App() {
   const [expandedProject, setExpandedProject] = useState(null);
@@ -24,16 +25,12 @@ function App() {
 
   const projects = [
     {
-      name: "Medical Hub Drone",
-      description: "Developed an innovative system to detect vehicle collisions in real time and automate emergency response using integrated technologies. The solution features a crash detection module, GPS-based tracking, and drone-assisted medical delivery to ensure rapid assistance during the critical golden hour. Designed to reduce emergency response times and save lives, particularly in remote or high-accident areas. The system targets adoption by government agencies, automobile manufacturers, and insurance companies, offering scalable impact and strong potential for real-world deployment."
+      name: "Drone based Infrastructure Monitoring",
+      description: "As urban infrastructure ages, regular inspection and maintenance are essential for ensuring safety. Cracks in concrete and corrosion on iron surfaces can lead to catastrophic failures if undetected. This project presents an integrated UAV-based system using drones and deep learning to automatically detect concrete cracks and iron corrosion from aerial imagery. By leveraging transfer learning with models like ResNet and VGG16, the system provides a cost-effective, automated solution for early damage detection, enhancing maintenance planning and public safety."
     },
     {
       name: "Drone based Animal Surveillance using AI",
       description: "This project utilizes autonomous drones equipped with AI to monitor animals within predefined boundaries. The system employs object detection algorithms to track animal movement, and if an animal crosses a virtual geofenced boundary, the drone triggers real-time alerts. This helps prevent animals from entering restricted zones or unsafe areas, supporting wildlife management, reducing human-animal conflict, and enhancing safety in agricultural or forest-edge regions."
-    },
-    {
-      name: "Drone based Infrastructure Monitoring",
-      description: "As urban infrastructure ages, regular inspection and maintenance are essential for ensuring safety. Cracks in concrete and corrosion on iron surfaces can lead to catastrophic failures if undetected. This project presents an integrated UAV-based system using drones and deep learning to automatically detect concrete cracks and iron corrosion from aerial imagery. By leveraging transfer learning with models like ResNet and VGG16, the system provides a cost-effective, automated solution for early damage detection, enhancing maintenance planning and public safety."
     },
     {
       name: "Library Management System",
@@ -46,6 +43,11 @@ function App() {
       name: " Amaravati Drone Summit 2024 ",
       description: "Awarded 3rd place at the prestigious Amaravati Drone Summit 2024 for a project on crack detection using drones. The innovative solution showcased the use of unmanned aerial vehicles (UAVs) and deep learning for automated structural health monitoring, helping to identify cracks in infrastructure with greater accuracy and efficiency.",
       image: hackathonImage
+    },
+    {
+      name: " Ideathon 2023 ",
+      description: "Secured 4th place in Ideathon 2023 conducted by ACIC-KL Startups Foundation. The project demonstrated innovation in applying emerging technologies to real-world problems. Awarded a cash prize of ₹2500 as recognition for impactful idea presentation and practical feasibility.",
+      image: ideathonImage
     }
   ];
 
@@ -59,25 +61,23 @@ function App() {
 
   return (
     <div className="App">
-  <header className="App-header">
-  <nav>
-    <div className="logo-text">
-      <img src={require('./assets/logo.png')} alt="Logo" className="logo-image" />
-      Gullapalli Venkat
-    </div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-
+      <header className="App-header">
+        <nav>
+          <div className="logo-text">
+            <img src={require('./assets/logo.png')} alt="Logo" className="logo-image" />
+            Gullapalli Venkat
+          </div>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
       <main>
         <section id="about">
@@ -86,7 +86,7 @@ function App() {
             <img src={MyPhoto} alt="Venkat" className="about-image" />
             <div className="about-text">
               <p>
-              I'm Venkat, a passionate Computer Science student with a strong interest in the dynamic world of technology and innovation. With a deep fascination for drone manufacturing, artificial intelligence, and the ever-evolving landscape of technology, I am committed to exploring and developing cutting-edge solutions. My curiosity drives me to discover how AI and automation can reshape industries and make an impactful difference. As I continue my journey, I am excited to collaborate with like-minded professionals, innovators, and mentors in the fields of AI, drone technology, and innovation. Let's connect and drive forward this exciting technological revolution together!
+                I'm Venkat, a passionate Computer Science student with a strong interest in the dynamic world of technology and innovation. With a deep fascination for drone manufacturing, artificial intelligence, and the ever-evolving landscape of technology, I am committed to exploring and developing cutting-edge solutions. My curiosity drives me to discover how AI and automation can reshape industries and make an impactful difference. As I continue my journey, I am excited to collaborate with like-minded professionals, innovators, and mentors in the fields of AI, drone technology, and innovation. Let's connect and drive forward this exciting technological revolution together!
               </p>
               <a href={ResumePDF} target="_blank" rel="noopener noreferrer">
                 <button className="resume-button">Resume</button>
@@ -106,7 +106,7 @@ function App() {
               { img: javaLogo, name: 'Java' },
               { img: flaskLogo, name: 'Flask' },
               { img: canvaLogo, name: 'Canva' },
-              { img: figmaLogo, name: 'Figma' } // ✅ Added Figma
+              { img: figmaLogo, name: 'Figma' }
             ].map(skill => (
               <div className="skill-box" key={skill.name}>
                 <img src={skill.img} alt={skill.name} />
@@ -165,23 +165,19 @@ function App() {
             {[
               {
                 title: "AWS Certified Cloud Practitioner",
-                issuer: "AWS",
-                date: "May 2024 - May 2027"
+                issuer: "AWS"
               },
               {
-                title: "Coming Soon",
-                issuer: "Coming Soon",
-                date: "Coming Soon"
+                title: "Linguaskill General",
+                issuer: "Cambridge"
               },
               {
-                title: "SComing Soon",
-                issuer: "Coming Soon",
-                date: "Coming Soon"
+                title: "Azure AI Fundamentals",
+                issuer: "Microsoft"
               },
               {
-                title: "Coming Soon",
-                issuer: "Coming Soon",
-                date: "Coming Soon"
+                title: "AUTOMATION ANYWHERE CERTIFIED ESSENTIALS RPA PROFESSIONAL 2023",
+                issuer: "AUTOMATION ANYWHERE"
               }
             ].map((cert, idx) => (
               <div className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`} key={idx}>
