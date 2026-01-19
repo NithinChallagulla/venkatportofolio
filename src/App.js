@@ -16,6 +16,8 @@ import klUniversityImage from './assets/kl.png';
 import sriChaitanyaImage from './assets/sri-chaitanya.jpeg';
 import drGowthamImage from './assets/dr-gowtham.jpg';
 
+
+import hackImage from './assets/hack.jpg';
 import hackathonImage from './assets/hackathon.jpg';
 import ideathonImage from './assets/ideathon.jpg'; // ✅ NEW IMPORT
 
@@ -39,6 +41,11 @@ function App() {
   ];
 
   const achievements = [
+    {
+      name: " HackAP Hackathon ",
+      description: "Awarded 3rd Place at the prestigious HackAP Hackathon, organized by ElectronVibe, for a solution focused on enabling predictive maintenance through grid intelligence and infrastructure monitoring. The project leveraged intelligent monitoring and predictive analytics to support proactive infrastructure management, improving grid reliability, reducing operational risks, and optimizing maintenance planning for critical energy systems.",
+      image: hackImage
+    },
     {
       name: " Amaravati Drone Summit 2024 ",
       description: "Awarded 3rd place at the prestigious Amaravati Drone Summit 2024 for a project on crack detection using drones. The innovative solution showcased the use of unmanned aerial vehicles (UAVs) and deep learning for automated structural health monitoring, helping to identify cracks in infrastructure with greater accuracy and efficiency.",
@@ -126,7 +133,7 @@ function App() {
               img: sriChaitanyaImage, title: "Higher Secondary | S.S.C",
               school: "Sri Chaitanya Junior College", duration: "2020 - 2022 | Completed"
             }, {
-              img: drGowthamImage, title: "Matriculation | C.B.S.E",
+              img: drGowthamImage, title: "10th | C.B.S.E",
               school: "Dr. K.K.R’s Gowtham School", duration: "2019 - 2020 | Completed"
             }].map((edu, idx) => (
               <div className="education-card" key={idx}>
