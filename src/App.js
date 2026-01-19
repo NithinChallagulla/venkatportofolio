@@ -19,7 +19,7 @@ import drGowthamImage from './assets/dr-gowtham.jpg';
 
 import hackImage from './assets/hack.jpg';
 import hackathonImage from './assets/hackathon.jpg';
-import ideathonImage from './assets/ideathon.jpg'; // ✅ NEW IMPORT
+import ideathonImage from './assets/ideathon.jpg'; 
 
 function App() {
   const [expandedProject, setExpandedProject] = useState(null);
